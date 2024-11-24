@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Bulb</title>
+  <style>
+    img { 
+      width: 100px; /* Fixed width */
+      height: 150px; /* Fixed height */
+      object-fit: contain; /* Ensures the image scales properly */
+      cursor: pointer; 
+      transition: 0.3s; /* Smooth transition for toggle */
+    }
+  </style>
+</head>
+<body>
+  <img src="off.jpg" id="bulb" alt="Bulb">
+  <script>
+    let bulb = document.querySelector("#bulb");
+
+    bulb.addEventListener('click', () => {
+      if (bulb.src.includes("off.jpg")) {
+        bulb.src = "on.jpg";  // Turn bulb "on"
+      } else {
+        bulb.src = "off.jpg"; // Turn bulb "off"
+      }
+    });
+  </script>
+</body>
+</html>
